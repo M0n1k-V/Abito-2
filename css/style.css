@@ -1,86 +1,324 @@
 * {
-    box-sizing: border-box; /* всегда по умолчанию*/
+  box-sizing: border-box; /* всегда по умолчанию*/
 }
 body {
-    margin: 0;
-    font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 .container {
-    width: 100%;
-    max-width: 1170px; /* всегда смотреть ширину по макету и не выходить за неё */
-    padding: 0 12px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1170px; /* всегда смотреть ширину по макету и не выходить за неё */
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
 .header {
-    padding-top: 30px;
-    padding-bottom: 24px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .header-box {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .header-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
 }
 
 .header-logo span {
-    line-height: 28px;
-    font-size: 24px;
-    font-weight: 700;
-    margin-left: 6px;
+  line-height: 28px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 6px;
+  color: #0A143A;
 }
 
 .btn {
-    line-height: 16px;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-outline {
-    background-color: transparent; /* прозрачная кнопка */
+  background-color: transparent; /* прозрачная кнопка */
 }
 
 .btn-primary {
-    background-color: rgb(37, 110, 235);
-    color: rgb(255, 255, 255);
+  background-color: rgb(37, 110, 235);
+  color: rgb(255, 255, 255);
 }
 
 .header-burger {
-    width: 30px;
-    height: 19px;
-    display: none;
+  width: 30px;
+  height: 19px;
+  display: none;
 }
 
-@media (max-width:1200px) { /* СТАНДАРТ БУТСТРАПА*/
-    .container {
-        max-width: 930px;
-    }
+.search {
+  margin-bottom: 45px;
+}
+
+.search-box {
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(37, 110, 235);
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-box input {
+  flex-grow: 1;
+  padding: 14px 22px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn .search-btn_icon {
+  width: 15px;
+  height: 15px;
+}
+
+.search-btn .search-btn_text {
+  margin-left: 2px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.content {
+  padding-bottom: 50px;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.content-main {
+  flex-grow: 1;
+}
+
+.content-side {
+  width: 260px;
+  max-width: 260px;
+}
+
+.content-main-title {
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.content-main_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.content-main_list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 60px / 3);
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.content-main_list-item--img {
+  width: 100%;
+  display: flex;
+}
+.content-main_list-item--img img {
+  width: 100%;
+}
+
+.content-main_list-item--title {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #0a143a;
+}
+
+.content-main_list-item--title:hover .content-main_list-item--title {
+  color: #256eeb;
+}
+
+.content-main_list-item--price {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+  color: #0a143a;
+}
+
+.content-main_list-item--desc-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.content-main_list-item--desc {
+  font-size: 14px;
+  line-height: 16px;
+  color: #c4c4c4;
+}
+
+.content-side-title {
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.content-side_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 25px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+}
+
+.content-side_list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-side_list-item--title {
+  margin-top: 7px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content-side_list-item--text {
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.content-side_footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-side_footer--item {
+  color: #c4c4c4;
+  margin: 0;
+  gap: 4px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.content-product {
+  display: flex;
+  flex-grow: 1;
+  gap: 30px;
+}
+
+.content-product_left {
+  flex-basis: 50%;
+}
+
+.content-product_right {
+  flex-basis: 50%;
+}
+
+.content-product_title, .content-product_price {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.content-product_img {
+    width: 100%;
+}
+
+.content-product_text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@media (max-width: 1200px) {
+  /* СТАНДАРТ БУТСТРАПА*/
+  .container {
+    max-width: 930px;
+  }
+  .content-main_list-item {
+    width: calc(100% - 30px / 2);
+  }
 }
 @media (max-width: 991px) {
-    .container {
-        max-width: 730px;
-    }
+  .container {
+    max-width: 730px;
+  }
+  .content-box {
+    flex-direction: column;
+  }
+  .content-main {
+    width: 100%;
+  }
+  .content-side {
+    width: 100%;
+    min-width: none;
+  }
+  .content-product {
+    flex-direction: column;
+    width: 100%;
+  }
+  .content-product_left {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .content-product_right {
+    flex-basis: 100%;
+    width: 100%;
+  }
 }
 @media (max-width: 786px) {
-    .container {
-        max-width: 100%;
-    }
+  .container {
+    max-width: 100%;
+  }
 
-    .header-controls {
-        display: none;
-    }
-    
-    .header-burger {
-        display: block;
-    }
+  .header-controls {
+    display: none;
+  }
+
+  .header-burger {
+    display: block;
+  }
+  .search-btn .search-btn_text {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .content-main_list-item {
+    width: 100%;
+  }
 }
